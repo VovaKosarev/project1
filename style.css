@@ -1,0 +1,124 @@
+body {
+  background-image: url("tile.jpg");
+  background-color: #cccccc;
+  z-index: 1;
+}
+
+#title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+
+#addTask {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+  background-image: url("formbg.jpg");
+  background-color: #cccccc;
+  width: 600px;
+  height: 250px;
+}
+
+#taskForm {
+  justify-content: center;
+  align-items: center;
+
+  width: 500px;
+  height: 150px;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#taskContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: -2em;
+  margin-bottom: -2em;
+  padding-top: 2em;
+}
+
+#taskContainer>div {
+  display: flex;
+  flex-direction: column;
+  background: url("notebg.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 250px;
+  width: 200px;
+  word-wrap: break-word;
+  z-index: 4;
+
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  mix-blend-mode: multiply;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#taskContainer>div>p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: black;
+  border: none;
+  position: relative;
+  top: 10px;
+
+}
+
+#taskContainer>div>span {
+  position: relative;
+  top: 10px;
+  width: 9rem;
+  height: 10rem;
+  max-height: 140px;
+  background-color: transparent;
+  stroke: none;
+  color: saddlebrown;
+  border: none;
+  overflow: hidden;
+}
+
+#taskContainer>div:hover>span {
+  overflow-y: scroll;
+}
+
+#removeBtn {
+  position: relative;
+  top: 20px;
+  left: 150px;
+  visibility: hidden;
+}
+
+#taskContainer>div:hover>#removeBtn {
+  visibility: visible;
+}
